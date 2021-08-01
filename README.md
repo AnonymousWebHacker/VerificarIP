@@ -8,7 +8,7 @@ Oriented to verify the connection of equipment by IP
 <img src="https://github.com/AnonymousWebHacker/VerificarIP/blob/main/demo.webp">
 </p>
 
-## COMO USAR
+## How To
 
 1 - If you are using powershell scripts for the first time, in order to run scripts you need to give PowerShell permission
 Run PowerShell as administrator and run
