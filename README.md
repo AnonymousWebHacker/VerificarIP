@@ -5,7 +5,7 @@ Version: 1.1
 Orientado a verificar la conexion de equipos por IP
 
 <p align="center">
-<img src="https://github.com/AnonymousWebHacker/VerificarIP/raw/branch/master/demo.webp">
+<img src="https://github.com/AnonymousWebHacker/VerificarIP/blob/main/demo.webp">
 </p>
 
 ## COMO USAR
