@@ -4,24 +4,16 @@
 #      Variables         #
 ##########################
 
-# Tabla de colores
--------------------
-# Red   # Rojo   #
-# Blue  # Azul   #
-# White # Blanco #
-# Black # Negro  #
-# Green # Verde  #
--------------------
+# Header Colors
+# Header
+$text_color="White"
+$back_color="Black"
 
-# Encabezado
-$color_texto="White"
-$color_fondo="Black"
-
-# Color columnas
-$color_texto_ok="Green"
-$color_fondo_ok="Black"
-$color_texto_error="Red"
-$color_fondo_error="Black"s
+# Colum Color
+$text_color_ok="Green"
+$back_color_ok="Black"
+$text_color_error="Red"
+$back_color_error="Black"
 
 
 Function Ping-Host
@@ -64,8 +56,7 @@ Function Ping-Host
 
     #output the Header Row on the screen
     Write-Host $Firstline 
-    Write-host $out -ForegroundColor $color_texto -BackgroundColor $color_fondo
-#   Write-host $out -ForegroundColor White -BackgroundColor Black
+    Write-host $out -ForegroundColor $text_color -BackgroundColor $back_color
 
     $Hosts|%{
     $total[$i]++
@@ -77,7 +68,7 @@ Function Ping-Host
     $FailurePercent = $("{0:N2}" -f (($Failure[$i]/$total[$i])*100))
 
     #Print status UP in GREEN if above condition is met
-    Write-Host "| $_$(Make-Space $_.Length $Maximum)| UP$(Make-Space 2 4)  | $SuccessPercent`%$(Make-Space ([string]$SuccessPercent).length 6) | $FailurePercent`%$(Make-Space ([string]$FailurePercent).length 6) | $($Total[$i])$(Make-Space ([string]$Total[$i]).length 9)|" -BackgroundColor $color_fondo_ok -ForegroundColor $color_texto_ok
+    Write-Host "| $_$(Make-Space $_.Length $Maximum)| UP$(Make-Space 2 4)  | $SuccessPercent`%$(Make-Space ([string]$SuccessPercent).length 6) | $FailurePercent`%$(Make-Space ([string]$FailurePercent).length 6) | $($Total[$i])$(Make-Space ([string]$Total[$i]).length 9)|" -BackgroundColor $back_color_ok -ForegroundColor $text_color_ok
     }
     else
     {
@@ -88,7 +79,7 @@ Function Ping-Host
      $FailurePercent = $("{0:N2}" -f (($Failure[$i]/$total[$i])*100))
 
     #Print status DOWN in RED if above condition is met
-    Write-Host "| $_$(Make-Space $_.Length $Maximum)| DOWN$(Make-Space 4 4)  | $SuccessPercent`%$(Make-Space ([string]$SuccessPercent).length 6) | $FailurePercent`%$(Make-Space ([string]$FailurePercent).length 6) | $($Total[$i])$(Make-Space ([string]$Total[$i]).length 9)|" -BackgroundColor $color_fondo_error -ForegroundColor $color_texto_error
+    Write-Host "| $_$(Make-Space $_.Length $Maximum)| DOWN$(Make-Space 4 4)  | $SuccessPercent`%$(Make-Space ([string]$SuccessPercent).length 6) | $FailurePercent`%$(Make-Space ([string]$FailurePercent).length 6) | $($Total[$i])$(Make-Space ([string]$Total[$i]).length 9)|" -BackgroundColor $back_back_error -ForegroundColor $text_color_error
     }
     $i++
 
@@ -102,9 +93,3 @@ Function Ping-Host
     }
 }
 
-# Columnas
-#$colum_host="HOST"
-#$colum_status="STATUS"
-#$colum_success="SUCCESS"
-#$colum_failure="FAILURE"
-#$colum_attempts="ATTEMPTS"

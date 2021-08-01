@@ -1,8 +1,8 @@
-## Verificar IP
+## VerifyIPs
+Version: 1.2
 
-Version: 1.1
-
-Orientado a verificar la conexion de equipos por IP
+Script PowerShell to Windows.
+Oriented to verify the connection of equipment by IP
 
 <p align="center">
 <img src="https://github.com/AnonymousWebHacker/VerificarIP/blob/main/demo.webp">
@@ -10,55 +10,51 @@ Orientado a verificar la conexion de equipos por IP
 
 ## COMO USAR
 
-1 - Si es la primera vez que usa scripts powershell, para poder ejecutar scripts necesita darle permiso a PowerShell
-Ejecutar PowerShell como administrador y ejecutar
+1 - If you are using powershell scripts for the first time, in order to run scripts you need to give PowerShell permission
+Run PowerShell as administrator and run
 
 ```
 Set-ExecutionPolicy Unrestricted
 ```
 
-2 - Copiar ambas carpetas [`Ping-Host` y `VerificarIP`] en la ruta
+2 - Copy both folders [`Ping-Host` and` VerifyIPs`] in the path
 ```
 C:\Program Files (x86)\WindowsPowerShell\Modules\
 C:\Program Files \WindowsPowerShell\Modules\
 ```
 
-3 - Copiar [ lista_servidores.txt ] afuera en C:\
+3 - Copy [ server.list ] outside on C:\
 ```
-C:\lista_servidores.txt
+C:\server.list
 
 ```
-4 - Ejecutar
-Abrir PowerShell y ejecutar 
+4 - Run
+Open PowerShell and run 
 ```
-VerificarIP
+VerifyIPs
 ```
 
-### CAMBIO DE COLORES
-Puede sustituir el color de texto y fondo de las columnas
+### COLOR CHANGE
+You can substitute the text and background color of the columns
 
-1 - Abra `VerificarIP.psm1` con un editor de textos y altere los valores en estas opciones
+1 - Open `VerifyIP.psm1` with a text editor and alter the values ​​in these options
 
 ```
-# Encabezado	
-$color_texto="White"     	#Color Texto de Encabezado
-$color_fondo="Black"	 	#Color Fondo de Encabezado
+# Header
+$color_texto="White"     	#header text color
+$color_fondo="Black"	 	#header background color
 
 # Color columnas
-$color_texto_ok="Green"  	#Color Texto de Correcto
-$color_fondo_ok="Black"		#Color Fondo de Correcto
-$color_texto_error="Red"	#Color Texto de Error
-$color_fondo_error="Black"	#Color Fondo de Error
+$text_color_ok="Green"  	#Color text column sussefull
+$back_color_ok="Black"		#Color background colum sussefull
+$text_color_error="Red"	#Color text column error
+$back_color_error="Black"	#Color background column error
 ```
 
-#### Colores permitidos
+#### Color allows
 
 ```
--------------------
-# Red   # Rojo   #
-# Blue  # Azul   #
-# White # Blanco #
-# Black # Negro  #
-# Green # Verde  #
--------------------
+-----------------------------------------
+# Red  # Blue   # Green # Black # White #
+-----------------------------------------
 ```
