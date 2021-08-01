@@ -1,0 +1,9 @@
+1 - Ejecutar PowerShell como adminsitrador y poner el comando
+	Set-ExecutionPolicy Unrestricted  (le da permiso de ejecutar comandos)
+
+2 - Copiar las carpetas [Ping-Host y VerificarIP] en la ruta
+C:\Program Files (x86)\WindowsPowerShell\Modules\
+C:\Program Files \WindowsPowerShell\Modules\
+
+3 - Copiar [lista_servidores.txt]auera en C:
+C:\lista_servidores.txt
